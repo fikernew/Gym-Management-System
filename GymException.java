@@ -4,3 +4,4 @@ public class GymException extends Exception {
         super(message);
     }
 }
+
