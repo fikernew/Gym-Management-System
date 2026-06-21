@@ -54,7 +54,7 @@ public abstract class Person {
     public String getPhone() { return phone; }
     public String getRole()  { return role;  }
 
-    // Abstract method - from Inheritance PDF
+    
     public abstract String getDetails();
 
     @Override
