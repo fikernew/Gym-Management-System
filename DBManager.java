@@ -163,7 +163,7 @@ public class DBManager {
                 }
             }
 
-        } catch (SQLException | gymException e) {
+        } catch (SQLException | GymException e) {
             System.out.println("Error finding member: " + e.getMessage());
         } finally {
             try { if (conn != null) conn.close(); } catch (SQLException e) { }
