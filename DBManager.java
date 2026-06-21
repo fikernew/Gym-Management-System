@@ -145,7 +145,7 @@ public class DBManager {
                     );
                 }
 
-            } else if (id.startsWith("D")) {
+            } else if (id.startsWith("C")) {
                 PreparedStatement ps = conn.prepareStatement(
                         "SELECT * FROM customers WHERE id = ?"
                 );
