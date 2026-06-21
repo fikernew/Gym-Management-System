@@ -44,7 +44,28 @@ public class DBManager {
 
     // ─── TRAINER OPERATIONS ───────────────────────────────────────────────────
 
+    public static void saveTrainer(Trainer t) {
+        Connection conn = null;
+        try {
+            conn = getConnection();
 
+            // PreparedStatement - from JDBC PDF (prevents SQL injection)
+            PreparedStatement ps = conn.prepareStatement(
+                    "INSERT INTO trainers (id, name, age, phone, specialty) VALUES (?, ?, ?, ?, ?)"
+            );
+            ps.setString(1, t.getId());
+            ps.setString(2, t.getName());
+            ps.setInt   (3, t.getAge());
+            ps.setString(4, t.getPhone());
+            ps.setString(5, t.getSpecialty());
+            ps.executeUpdate();
+
+        } catch (SQLException e) {
+            System.out.println("Error saving trainer: " + e.getMessage());
+        } finally {
+            try { if (conn != null) conn.close(); } catch (SQLException e) { }
+        }
+    }
 
     public static ArrayList<Trainer> loadTrainers() {
         ArrayList<Trainer> list = new ArrayList<>();
