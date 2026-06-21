@@ -1,4 +1,3 @@
-// Abstract class - from Inheritance PDF
 public abstract class Person {
 
     private String id;
@@ -7,11 +6,11 @@ public abstract class Person {
     private String phone;
     private String role;
 
-    // Static counters - from OOP PDF
+    
     private static int trainerCount  = 0;
     private static int customerCount = 0;
 
-    // Updated constructor - accepts id and role from subclass
+    
     public Person(String id, String name, int age, String phone, String role) throws GymException {
         validate(name, age, phone);
         this.id    = id;
@@ -21,7 +20,7 @@ public abstract class Person {
         this.role  = role;
     }
 
-    // Validation using throw - from Exception Handling PDF
+    
     private void validate(String name, int age, String phone) throws GymException {
         if (name == null || name.trim().isEmpty()) {
             throw new GymException("Name cannot be empty.");
@@ -34,7 +33,7 @@ public abstract class Person {
         }
     }
 
-    // Static methods to generate IDs - from OOP PDF
+    
     public static String generateTrainerId() {
         trainerCount++;
         return String.format("T%03d", trainerCount);
