@@ -32,3 +32,5 @@ public class Trainer extends Person {
                "Specialty: " + specialty;
     }
 }
+
+
