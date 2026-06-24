@@ -89,12 +89,7 @@ public class MemberService {
         int choice = GymSystem.getIntInput("Enter choice: ");
         if (choice == 4) return;
 
-        // Password asked inside after choosing option
-        String password = GymSystem.getStringInput("Enter Password: ");
-        if (!password.equals(GymSystem.VIEW_PASSWORD)) {
-            System.out.println("Access Denied. Wrong password.");
-            return;
-        }
+        if (!authenticateAdmin()) return;
 
         switch (choice) {
             case 1 -> listAll();
@@ -135,5 +130,13 @@ public class MemberService {
         System.out.println("\n====== Customers (" + customers.size() + ") ======");
         if (customers.isEmpty()) { System.out.println("No customers found."); return; }
         for (Person p : customers) { System.out.println("\n" + p); System.out.println("-------------------------"); }
+    }
+    private static boolean authenticateAdmin() {
+        String password = GymSystem.getStringInput("Enter Admin Password to View Records: ");
+        if (!password.equals(GymSystem.VIEW_PASSWORD)) {
+            System.out.println("Access Denied! Incorrect Password.");
+            return false;
+        }
+        return true;
     }
 }
