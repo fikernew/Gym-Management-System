@@ -75,7 +75,10 @@ public class MemberService {
     }
 
     // ─── VIEW MEMBERS MENU ────────────────────────────────────────────────────
-
+    /**
+     * Displays the administrative portal for viewing registered members.
+     * Requires secure admin password authentication.
+     */
     static void viewMembersMenu() {
         System.out.println("\n-- View Members --");
         System.out.println("1. List All Members");
@@ -102,7 +105,10 @@ public class MemberService {
     }
 
     // ─── LIST METHODS ─────────────────────────────────────────────────────────
-
+    /**
+     * Retrieves and displays all registered trainers and customers
+     * currently persisted in the system.
+     */
     static void listAll() {
         ArrayList<Trainer>  trainers  = DBManager.loadTrainers();
         ArrayList<Customer> customers = DBManager.loadCustomers();
