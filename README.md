@@ -182,3 +182,5 @@ java -cp .:lib/postgresql-42.7.11.jar GymSystem
 ---
 
 *FitLife Gym System — Group Project | Object-Oriented Programming Course*
+
+⁠* core business logic extracting authentication handles cleanly.⁠
