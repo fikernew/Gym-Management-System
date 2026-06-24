@@ -3,7 +3,10 @@ import java.util.ArrayList;
 public class MemberService {
 
     // ─── ADD TRAINER ──────────────────────────────────────────────────────────
-
+    /**
+     * Handles the registration process for new gym trainers.
+     * Collects personal details, specialty, and saves the record to the database.
+     */
     static void addTrainer() {
         System.out.println("\n-- Add Trainer --");
         try {
@@ -29,7 +32,10 @@ public class MemberService {
     }
 
     // ─── ADD CUSTOMER ─────────────────────────────────────────────────────────
-
+    /**
+     * Handles the registration process for new gym customers.
+     * Selects membership tiers and persists data via DBManager.
+     */
     static void addCustomer() {
         System.out.println("\n-- Add Customer --");
         try {
