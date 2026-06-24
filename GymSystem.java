@@ -2,8 +2,8 @@ import java.util.Scanner;
 
 public class GymSystem {
 
-    static final String ADMIN_ID = "CODE123";
-    static final String VIEW_PASSWORD = "CODE321";
+    static final String ADMIN_ID = "CODE@321";
+    static final String VIEW_PASSWORD = "CODE@123";
     static Scanner sc  = new Scanner(System.in);
 
     public static void main(String[] args) {
