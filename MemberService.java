@@ -1,5 +1,8 @@
 import java.util.ArrayList;
-
+/**
+ * MemberService handles the core business logic for managing gym members,
+ * including trainers and customers, utilizing DBManager for persistence.
+ */
 public class MemberService {
 
     // ─── ADD TRAINER ──────────────────────────────────────────────────────────
